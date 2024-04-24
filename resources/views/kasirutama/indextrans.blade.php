@@ -6,7 +6,24 @@
     <title>Dashboard Template</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+     <!-- loader-->
+     <link href="/assets/css/pace.min.css" rel="stylesheet" />
+     <script src="/assets/js/pace.min.js"></script>
+     <!--favicon-->
+     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+     <!-- simplebar CSS-->
+     <link href="/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+     <!-- Bootstrap core CSS-->
+     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+     <!-- animate CSS-->
+     <link href="/assets/css/animate.css" rel="stylesheet" type="text/css" />
+     <!-- Icons CSS-->
+     <link href="/assets/css/icons.css" rel="stylesheet" type="text/css" />
+     <!-- Sidebar CSS-->
+     <link href="/assets/css/sidebar-menu.css" rel="stylesheet" />
+     <!-- Custom Style-->
+     <link href="/assets/css/app-style.css" rel="stylesheet" />
     <!-- Custom styles -->
     <style>
         /* Add custom styles here */
@@ -21,13 +38,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Settings</a>
+                    <a class="nav-link btn btn-outline-danger me-2" href="#">Logout <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
@@ -38,19 +49,18 @@
             <nav class="col-md-2 d-none d-md-block bg-light sidebar">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="{{url('coba')}}">
+                        <li class="nav-item active">
+                            <a class="nav-link " href="{{url('indexkasir')}}">
                                 Dashboard <span class="sr-only">(current)</span>
                             </a>
                         </li>
+                        
+
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('coba2')}}">Informasi Transaksi</a>
+                            <a class="nav-link" href="{{url('transaksi')}}">Transaksi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('coba3')}}">Informasi Barang</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Reports</a>
+                            <a class="nav-link" href="{{url('transak')}}">Laporan</a>
                         </li>
                     </ul>
                 </div>
@@ -79,13 +89,13 @@
                                 <tr>
                                    <td></td>
                                    <td></td>
-                                   <td>a</td>
-                                   <td>a</td>
-                                   <td>a</td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
                                     <td>
-                                       {{-- <a type="submit" href="{{ url('edit/' . $i->PetugasId) }}"
+                                       {{-- <a type="submit" href=""
                                             class="btn btn-secondary"><i class="bi bi-pencil-square"></i></a>
-                                        <a href="hapusadmin/{{ $i->PetugasId }}"><button type="submit"
+                                        <a href=""><button type="submit"
                                                 class="btn btn-danger"><i class="bi bi-trash"></i></button></a>  --}}
                                     </td>
                                 </tr>
@@ -98,6 +108,25 @@
             </main>
         </div>
     </div>
+    <div class="container fixed-bottom">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
+
+            <a href="/"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+
+
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

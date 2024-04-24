@@ -17,7 +17,9 @@ class AdminController extends Controller
         return view ('adminutama.barang');
     }
     public function anggota(){
-        return view ('adminutama.regisanggota');
+        $skuy = new kasir();
+
+        return view ('adminutama.regisanggota',['burnbrain' => $skuy->all()]);
     }
     public function regis(){
         return view ('authwkwk.registrasi');
@@ -34,7 +36,7 @@ class AdminController extends Controller
         //     'telepon' => 'required|min:4',
         //     'username' => 'required|min:10',
         //     'password' => 'required',
-        //     'level' => 'required',
+        //     'akses' => 'required',
              
         // ]);
         // $iq->create([
@@ -43,9 +45,22 @@ class AdminController extends Controller
         //     'telepon' => $request->telepon,
         //     'Username' => $request->username,
         //     'Password' => $request->password,
-        //     'Level' => $request->level
+        //     'akses' => $request->akses
         // ]);
-        return view ('adminutama/regisanggota');
+        return redirect ('regisanggota');
+    }
+    public function loginkan(){
+        return view ('authwkwk.login');
+    }
+    public function loginpost(Request $request){
+        $el = new kasir();
+        // cek username dan password exists (ada) di tabel masyarakat
+
+        if ($el->where('Username', $request->input('Username'))->where('Password', $request->input('Password'))->exists()) {
+            session(['Username' => $request->input('Username')]);
+            return redirect('dashadmin');
+        }
+        return back()->with('pesan', 'Username dan password tidak terdaftar');
     }
     
 }

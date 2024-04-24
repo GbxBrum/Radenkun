@@ -6,6 +6,7 @@
     <title>Dashboard Template</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Custom styles -->
     <style>
         /* Add custom styles here */
@@ -20,7 +21,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link text-danger" href="#">Logout <span class="sr-only">(current)</span></a>
+                    <a class="nav-link btn btn-outline-danger me-2" href="#">Logout <span class="sr-only">(current)</span></a>
                 </li>
                 
             </ul>
@@ -33,24 +34,15 @@
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{url('CobaTemplate')}}">
+                            <a class="nav-link active" href="{{url('indexkasir')}}">
                                 Dashboard <span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('transak')}}">Informasi Transaksi</a>
+                            <a class="nav-link" href="{{url('transak')}}">Transaksi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('infobuk')}}">Informasi Buku</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">data pasok</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">registrasi pengguna</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Users</a>
+                            <a class="nav-link" href="{{url('transak')}}">Laporan</a>
                         </li>
                     </ul>
                 </div>
@@ -93,6 +85,26 @@
             </main>
         </div>
     </div>
+    <div class="container fixed-bottom">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
+
+            <a href="/"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+
+
+
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
